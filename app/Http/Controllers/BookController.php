@@ -27,8 +27,8 @@ class BookController extends Controller
     }
 
     public function show($id) {
-        $book = Book::find($id);
-        return view('books.show', ['singleBook' => $book]);
+        $singleBook = Book::find($id);
+        return view('books.show', ['singleBook' => $singleBook]);
     }
 
     public function edit($id) {
