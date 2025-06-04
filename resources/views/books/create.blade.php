@@ -1,6 +1,6 @@
 <h1>New book</h1>
 
-<form action="/books/store" method="post">
+<form action="{{ route('books.store') }}" method="post">
     @csrf
     <input type="text" name="title" placeholder="title goes here">
     <input type="text" name="author" placeholder="author goes here">
