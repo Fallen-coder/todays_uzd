@@ -32,8 +32,8 @@ class BookController extends Controller
     }
 
     public function edit($id) {
-        $book = Book::find($id);
-        return $book;
+        $editbook = Book::find($id);
+        return view('books.edit', compact('editbook'));;
     }
 
     public function update(Request $request, $id) {
@@ -45,5 +45,10 @@ class BookController extends Controller
         ]);
 
         return redirect('/books/' . $book->id);
+    }
+    public function destroy($id) {
+        $book = Book::find($id);
+        $book->delete();
+        return redirect('/books') ;
     }
 }
