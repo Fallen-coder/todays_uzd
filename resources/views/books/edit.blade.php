@@ -1,3 +1,4 @@
+<x-app-layout>
 <h1>Edit book</h1>
 
 <form action="{{ route('books.update', $book) }}" method="post">
@@ -18,3 +19,4 @@
     @enderror
     <input type="submit" value="Update">
 </form>
+</x-app-layout>

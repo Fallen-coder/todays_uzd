@@ -1,3 +1,4 @@
+<x-app-layout>
 <h1>New book</h1>
 
 <form action="{{ route('books.store') }}" method="post">
@@ -16,3 +17,4 @@
     @enderror
     <input type="submit" value="Create">
 </form>
+</x-app-layout>

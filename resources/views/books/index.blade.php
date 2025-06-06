@@ -1,3 +1,4 @@
+<x-app-layout>
 @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}
@@ -22,3 +23,4 @@
         </li>
     @endforeach
 </ul>
+</x-app-layout>

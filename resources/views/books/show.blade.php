@@ -1,3 +1,4 @@
+<x-app-layout>
 @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}
@@ -7,3 +8,4 @@
 <h3>{{ $book->author }}</h3>
 <p>{{ $book->released_at }}</p>
 <a href="{{ route('books.index') }}">All books</a>
+</x-app-layout>
