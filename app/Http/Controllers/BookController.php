@@ -27,7 +27,7 @@ class BookController extends Controller
         }catch(ValidationError $e){
             \log::debug('validation error'.$e->getMessage());
         }
-        return redirect('/books/' . $book->id);
+        return redirect('/books/' . $book->id)->with("status","Book made sucefully");
     }
 
     public function show($id) {
@@ -52,11 +52,11 @@ class BookController extends Controller
         }catch(ValidationError $e){
             \log::debug('validation error'.$e->getMessage());
         }
-        return redirect('/books/' . $book->id);
+        return redirect('/books/' . $book->id)->with("status","Book edited sucefully");
     }
     public function destroy($id) {
         $book = Book::find($id);
         $book->delete();
-        return redirect('/books') ;
+        return redirect('/books')->with("status","Book deleted sucefully") ;
     }
 }
